@@ -50,8 +50,8 @@ const BlogList = props => {
 
 }
 export const query = graphql`
-query postList {
-  allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, limit: 5, skip: 5) {
+query postList($skip: Int!, $limit: Int!) {
+  allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, limit: $limit, skip: $skip) {
     edges {
       node {
         frontmatter {

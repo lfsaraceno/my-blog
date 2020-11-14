@@ -16,7 +16,7 @@ const BlogPost = ({ data }) => {
 
 }
 export const query = graphql`
-query Post($slug: String) {
+query blogPost($slug: String) {
   markdownRemark(fields: {slug: {eq: $slug}}) {
     frontmatter {
       title
