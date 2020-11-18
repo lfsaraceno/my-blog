@@ -9,6 +9,13 @@ module.exports={
     "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'uploads',
+        path: `${__dirname}/static/assets/uploads/img`,
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
@@ -18,14 +25,30 @@ module.exports={
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "posts",        
+        name: "posts",
         path: `${__dirname}/posts`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [],
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: "uploads",
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              linkImageToOriginal: false,
+            },
+          },
+          "gatsby-remark-lazy-load",
+          "gatsby-remark-prismjs",
+        ],
       },
     },
     "gatsby-transformer-sharp",

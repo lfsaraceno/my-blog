@@ -126,18 +126,7 @@ export const MainContent = styled.section`
   strong {
     font-weight: 700;
   }
-  pre {
-    padding: 1rem 3px;
-    background-color: #eee;
-    border-radius: 3px;
-    box-sizing: border-box;
 
-  }
-  code{
-    font-family: courier, monospace;
-    padding: 0 3px;
-
-  }
   .gatsby-resp-image-background-image {
     z-index: 2;
     opacity: 1 !important;

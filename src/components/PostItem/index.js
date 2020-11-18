@@ -7,7 +7,7 @@ const PostItem = ({slug, background, category = "others", date, timeToRead, titl
 
   <S.PostItemLink to={slug}>
     <S.PostItemWrapper>
-<S.PostItemTag background={background} >{category}</S.PostItemTag>
+      <S.PostItemTag background={background} >{category}</S.PostItemTag>
       <S.PostItemInfo>
         <S.PostItemDate>{date} • {timeToRead} minutos de leitura</S.PostItemDate>
         <S.PostItemTitle>{title}</S.PostItemTitle>

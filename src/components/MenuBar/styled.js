@@ -11,7 +11,7 @@ export const MenuBarWrapper = styled.aside`
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 0.8rem 0;
+  padding: 0.8rem 1.5rem 0.8rem 1rem;
   border-left: 1px solid #38444d;
   background-color: #192734;
   color: #fff;
